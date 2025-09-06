@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ReconX - Automated Nmap Report</title>
+    <style>
+        /* ===== Hacker Theme ===== */
+        body {
+            font-family: "Fira Code", "Consolas", monospace;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: #00ff00;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* ===== Header ===== */
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #111;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            color: #ff073a; /* neon red title */
+            text-shadow: 0 0 8px #ff073a, 0 0 15px #ff073a;
+        }
+
+        .meta {
+            margin-top: 10px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Summary ===== */
+        .summary {
+            margin: 30px 0;
+            padding: 15px;
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,255,0,0.3);
+        }
+
+        .summary h2 {
+            color: #00eaff;
+            margin-top: 0;
+            text-shadow: 0 0 6px #00eaff;
+        }
+
+        .summary p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        /* ===== Tables ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #0f0f0f;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(255,0,0,0.2);
+        }
+
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        th {
+            background: #111;
+            color: #ff073a;
+            text-shadow: 0 0 6px #ff073a;
+        }
+
+        tr:nth-child(even) {
+            background: #151515;
+        }
+
+        tr:nth-child(odd) {
+            background: #0f0f0f;
+        }
+
+        /* ===== Port States ===== */
+        .status-up { color: #00ff00; font-weight: bold; text-shadow: 0 0 6px #00ff00; }
+        .status-down { color: #ff073a; font-weight: bold; text-shadow: 0 0 6px #ff073a; }
+
+        .open { color: #00ff00; text-shadow: 0 0 6px #00ff00; }
+        .closed { color: #ff073a; text-shadow: 0 0 6px #ff073a; }
+        .filtered { color: #ffaa00; text-shadow: 0 0 6px #ffaa00; }
+
+        /* ===== Footer ===== */
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        /* ===== Terminal Effect ===== */
+        .terminal-box {
+            background: #000;
+            padding: 15px;
+            border: 1px solid #222;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,255,0,0.2);
+            font-size: 0.9rem;
+            color: #0f0;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* ===== Responsive ===== */
+        @media(max-width: 768px) {
+            body { font-size: 0.9rem; }
+            h1 { font-size: 1.5rem; }
+            .container { width: 95%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>ReconX - Nmap Report</h1>
+            <div class="meta">
+                <p><b>Target:</b> 127.0.0.1</p>
+                <p><b>Mode:</b> full</p>
+                <p><b>Date:</b> 2025-09-06 01:17:03</p>
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="summary">
+            <h2>📊 Scan Summary</h2>
+            
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+                
+            
+                
+                    
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                    
+                
+            
+            <p>✔ <span class="open">Open Ports:</span> 0</p>
+            <p>✖ <span class="closed">Closed Ports:</span> 0</p>
+            <p>⚠ <span class="filtered">Filtered Ports:</span> 0</p>
+        </div>
+
+        <!-- Hosts -->
+        
+            <h2>Host: nmap</h2>
+            
+
+            
+                
+            
+                
+                    <h3>Protocol: SCANINFO</h3>
+                    <table>
+                        <tr>
+                            <th>Port</th>
+                            <th>State</th>
+                            <th>Service</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>tcp</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                    </table>
+                
+            
+                
+                    <h3>Protocol: SCANSTATS</h3>
+                    <table>
+                        <tr>
+                            <th>Port</th>
+                            <th>State</th>
+                            <th>Service</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>timestr</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>elapsed</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>uphosts</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>downhosts</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>totalhosts</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                    </table>
+                
+            
+        
+            <h2>Host: scan</h2>
+            
+
+            
+                
+                    <h3>Protocol: 127.0.0.1</h3>
+                    <table>
+                        <tr>
+                            <th>Port</th>
+                            <th>State</th>
+                            <th>Service</th>
+                        </tr>
+                        
+                        <tr>
+                            <td>hostnames</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>addresses</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>vendor</td>
+                            <td class=""></td>
+                            <td></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>status</td>
+                            <td class="up">up</td>
+                            <td></td>
+                        </tr>
+                        
+                    </table>
+                
+            
+        
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="terminal-box">
+                reconX@nmap:~$ Scan complete<span class="blink">_</span>
+            </div>
+            <p>Generated by ReconX | Automated Nmap Scanner</p>
+        </div>
+    </div>
+</body>
+</html>

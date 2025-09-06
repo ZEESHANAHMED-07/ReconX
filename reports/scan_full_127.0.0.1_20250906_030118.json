@@ -1,0 +1,36 @@
+{
+    "nmap": {
+        "command_line": "/usr/lib/nmap/nmap --privileged -oX - -T4 -p- 127.0.0.1",
+        "scaninfo": {
+            "tcp": {
+                "method": "syn",
+                "services": "1-65535"
+            }
+        },
+        "scanstats": {
+            "timestr": "Sat Sep  6 03:01:18 2025",
+            "elapsed": "1.11",
+            "uphosts": "1",
+            "downhosts": "0",
+            "totalhosts": "1"
+        }
+    },
+    "scan": {
+        "127.0.0.1": {
+            "hostnames": [
+                {
+                    "name": "localhost",
+                    "type": "PTR"
+                }
+            ],
+            "addresses": {
+                "ipv4": "127.0.0.1"
+            },
+            "vendor": {},
+            "status": {
+                "state": "up",
+                "reason": "localhost-response"
+            }
+        }
+    }
+}
