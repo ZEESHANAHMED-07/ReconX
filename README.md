@@ -30,6 +30,51 @@ source venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 ```
+⚡ Usage
 
+Run the scanner with:
+```bash
+python3 autoscan.py <target> <mode>
+```
+
+Example scans:
+```bash
+# Quick scan on localhost
+python3 autoscan.py 127.0.0.1 quick
+
+# Full scan on single host
+python3 autoscan.py 192.168.1.1 full
+
+# Quick scan on local subnet
+python3 autoscan.py 192.168.1.0/24 quick
+
+# Vulnerability scan on scanme.nmap.org
+python3 autoscan.py scanme.nmap.org vuln
+```
+📁 Reports
+
+Reports are saved automatically in the reports/ folder:
+
+JSON → scan_<mode>_<target>_<timestamp>.json
+
+HTML → scan_<mode>_<target>_<timestamp>.html
+
+Example output:
+
+
+🛠 Roadmap
+
+ Add live progress bar for scans
+
+ Export reports to PDF
+
+ AI-powered scan analysis & recommendations
+
+ Integration with other recon tools (Nikto, Gobuster, etc.)
+
+⚔️ Disclaimer
+
+ReconX is for educational and authorized security testing only.
+Do not use against systems you don’t own or have explicit permission to test.
 
 
